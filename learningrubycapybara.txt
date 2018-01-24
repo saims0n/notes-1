@@ -1,0 +1,7 @@
+Then(/^I should see "([^"]*)" button$/) do |button|
+  if page.has_xpath?('//input[@title="'"#{button}"'"]')
+     writeFailure "new button is available"
+  else
+     puts "new button is not available"
+  end
+end
